@@ -202,7 +202,7 @@ object SolrSupport extends Logging {
 
     log.info("Sending batch of " + batch.size + " to collection " + collection)
 
-    req.add(asJavaCollection(batch))
+    req.add(asJavaCollection(batch), false)
 
     try {
       solrClient.request(req)
